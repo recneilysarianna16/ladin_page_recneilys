@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gamer Profile Generator</title>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700;900&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <header>
+    <h1>FORJA TU PERFIL GAMER</h1>
+    <p>Ingresa tu Nickname para calcular tus estadísticas de combate y compañero de aventuras.</p>
+  </header>
+
+  <main class="container">
+
+    <!-- TARJETA 1: Nivel de Nickname (Agify API) -->
+    <section class="card">
+      <div class="card-header">
+        <span class="badge">STATS</span>
+        <h2>1. Nivel de Jugador</h2>
+      </div>
+      <p>Pone a prueba tu Nickname en la red global:</p>
+      
+      <div class="input-group">
+        <input type="text" id="input-nick" placeholder="Tu Nickname..." value="Recneilys" minlength="2" maxlength="20" required>
+        <button id="btn-stats">Escanear</button>
+      </div>
+
+      <!-- Indicador visual en tiempo real -->
+      <div class="input-feedback">
+        <span id="mensaje-validacion">Nickname válido</span>
+        <span id="contador-caracteres">9/20</span>
+      </div>
+
+      <div id="contenedor-stats" class="resultado-box">
+        <p>Esperando Nickname...</p>
+      </div>
+    </section>
+
+    <!-- TARJETA 2: Montura / Mascota Fiel (Dog CEO API) -->
+    <section class="card">
+      <div class="card-header">
+        <span class="badge">COMPAÑERO</span>
+        <h2>2. Montura Fiel</h2>
+      </div>
+      <p>Convoca una bestia/mascota de combate aleatoria:</p>
+      <div id="contenedor-mascota" class="resultado-box">
+        <p>Buscando mascota...</p>
+      </div>
+      <button id="btn-nueva-mascota" class="btn-secundario">Cambiar Montura</button>
+    </section>
+
+    <!-- TARJETA 3: Chiste Informático (JokeAPI) -->
+    <section class="card">
+      <div class="card-header">
+        <span class="badge">HUMOR</span>
+        <h2>3. Humos de Dev</h2>
+      </div>
+      <p>Un chiste informático para recargar tu energía:</p>
+      <div id="contenedor-poder" class="resultado-box estilo-frase">
+        <p>Compilando chiste...</p>
+      </div>
+      <button id="btn-nuevo-poder" class="btn-secundario">Otro Chiste</button>
+    </section>
+
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>
